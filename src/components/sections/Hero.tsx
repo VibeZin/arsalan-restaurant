@@ -13,14 +13,24 @@ export default function Hero() {
     <section id="home" className="relative min-h-svh flex items-center justify-center overflow-hidden px-[5vw]">
 
       <div className="absolute inset-0 z-0 bg-bg">
-        <img
-          src="/media/hero/hero-bg.jpg"
-          alt="Arsalan Restaurant — charcoal grill ambiance"
-          className="w-full h-full object-cover object-center opacity-40"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-        />
-        <div className="absolute inset-0 hero-video-overlay bg-gradient-to-b from-bg/20 via-bg/60 to-bg" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_0%_50%,rgba(10,8,5,0.4),transparent)] pointer-events-none" />
+        <picture>
+          {/* Mobile: focus lower portion of the image (food area) */}
+          <source media="(max-width: 640px)" srcSet="media/hero/hero-bg.jpg" />
+          {/* Tablet & desktop: show more of the image */}
+          <img
+            src="media/hero/hero-bg.jpg"
+            alt="Arsalan Nihari and Seekh Kabab — Real Flavor, Real Satisfaction"
+            className="w-full h-full object-cover object-[center_65%] opacity-55 sm:object-[center_60%] md:object-[center_55%]"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+          />
+        </picture>
+        {/* Strong top fade to hide the poster's own branding text */}
+        <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg/10" />
+        {/* Bottom vignette to blend into the page */}
+        <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
+        {/* Subtle side vignettes */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_0%_50%,rgba(10,8,5,0.5),transparent)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_100%_at_100%_50%,rgba(10,8,5,0.3),transparent)] pointer-events-none" />
       </div>
 
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_65%,rgba(200,137,42,0.1)_0%,transparent_70%)] pointer-events-none" />
