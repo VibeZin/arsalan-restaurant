@@ -6,10 +6,19 @@ export default function Footer() {
     <footer className="border-t border-gold-dim bg-bg-secondary">
       <div className="max-w-[1100px] mx-auto px-[5vw] py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <h3 className="font-bengali text-xl font-semibold text-gold-light mb-1">আর্সালান</h3>
-          <p className="font-display italic text-cream-dim text-sm mb-4">Nehari & Kabab Corner</p>
+          <div className="flex items-center gap-3 mb-1">
+            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-gold-dim/30">
+              <img
+                src="media/logo/logo.jpg"
+                alt="Arsalan Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-bengali text-xl font-semibold text-gold-light">আর্সালান</h3>
+          </div>
+          <p className="font-display italic text-cream-dim text-sm mb-4">Nehari &amp; Kabab Corner</p>
           <p className="font-body text-[0.82rem] text-cream-dim leading-relaxed">
-            Authentic Pakistani & Afghani cuisine in the heart of Old Dhaka since we first lit our tandoor.
+            Authentic Pakistani &amp; Afghani cuisine in the heart of Old Dhaka since we first lit our tandoor.
           </p>
           <div className="flex gap-4 mt-5">
             <a href={contactInfo.facebook} target="_blank" rel="noopener noreferrer"

@@ -34,12 +34,11 @@ export default function Navbar() {
         }`}
       >
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="relative w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(200,137,42,0.4)]">
+          <div className="relative w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_22px_rgba(200,137,42,0.55)] group-hover:ring-1 group-hover:ring-gold-DEFAULT/40">
             <img
-              src="/media/logo/logo-white.png"
-              alt="Arsalan Logo"
-              className="object-contain w-full h-full"
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+              src="media/logo/logo.jpg"
+              alt="Arsalan Arabic Calligraphy Logo"
+              className="object-cover w-full h-full"
             />
           </div>
           <div className="flex flex-col">
