@@ -47,7 +47,7 @@ export default function Navbar() {
               আর্সালান
             </span>
             <span className="font-body text-[0.55rem] tracking-[0.3em] uppercase text-gold-DEFAULT/80 mt-1 hidden md:block">
-              Authentic Biryani
+              Nehari &amp; Kabab Corner
             </span>
           </div>
         </a>
